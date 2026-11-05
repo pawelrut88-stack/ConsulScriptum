@@ -1708,7 +1708,7 @@ consul = {
 				local cfg = consul.config.read()
 				local log = consul.new_log("console:commands:load_module")
 
-				if not string.find(package.path, ";consul/?.lua", 1, true) then
+				if not string.find(package.path, ";consul/%?%.lua") then
 					package.path = package.path .. ";consul/?.lua"
 				end
 
